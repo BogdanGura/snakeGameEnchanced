@@ -206,9 +206,9 @@ function moveSnake(squares)
     //Removing styling from the tail
     squares[tail].classList.remove("snake");
     currentSnake.unshift(currentSnake[0] + direction);
+    squares[currentSnake[0]].classList.add("snake");
     //movement ends
     eatApple(squares, tail);
-    squares[currentSnake[0]].classList.add("snake");
 }
 
 //Checks if the snake has hit a wall or a mine
